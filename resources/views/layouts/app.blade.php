@@ -46,7 +46,7 @@
                         @endif
                     @else
                         <li class="mx-2">
-                            <a class="nav-link" href="#">마이페이지</a>
+                            <a class="nav-link" href="/draws">마이페이지</a>
                         </li>
                     
                         <li class="nav-item dropdown">
