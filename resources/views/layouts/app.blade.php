@@ -23,9 +23,6 @@
                 <a id="logo" class="d-block" href="{{ url('/') }}">
                     <img src="/images/logo.jpg" alt="logo">
                 </a>
-                {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button> --}}
 
                 <ul id="nav" class="navbar-nav d-flex flex-row position-absolute">
                     <!-- Authentication Links -->
