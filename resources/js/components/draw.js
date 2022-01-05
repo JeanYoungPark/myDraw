@@ -48,15 +48,15 @@ function DrawCreate(){
                     </ul>
                 </div>
                 <div className="strokeColor">
-                    <button className="dropdown-toggle p-0 border-0 bg-primary rounded-circle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                    <ul className="dropdown-menu flex-wrap shadow border-0 bg-light" aria-labelledby="dropdownMenuButton2">
-                        <li className="checked d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-primary" href="#"></a></li>
-                        <li className="d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-secondary" href="#"></a></li>
-                        <li className="d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-success" href="#"></a></li>
-                        <li className="d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-warning" href="#"></a></li>
-                        <li className="d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-info" href="#"></a></li>
-                        <li className="d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-dark" href="#"></a></li>
-                        <li className="d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-white" href="#"></a></li>
+                    <button className="dropdown-toggle p-0 border-0 rounded-circle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <ul id="strokeColorDropDown" className="dropdown-menu flex-wrap shadow border-0 bg-light" aria-labelledby="dropdownMenuButton2">
+                        <li className="checked d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-primary" href="#" onClick={(e) => strokeColor(e)} data="0d6efd"></a></li>
+                        <li className="d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-secondary" href="#" onClick={(e) => strokeColor(e)} data="#6c757d"></a></li>
+                        <li className="d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-success" href="#" onClick={(e) => strokeColor(e)} data="#198754"></a></li>
+                        <li className="d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-warning" href="#" onClick={(e) => strokeColor(e)} data="#ffc107"></a></li>
+                        <li className="d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-info" href="#" onClick={(e) => strokeColor(e)} data="#0dcaf0"></a></li>
+                        <li className="d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-dark" href="#" onClick={(e) => strokeColor(e)} data="#212529"></a></li>
+                        <li className="d-flex justify-content-center py-2"><a className="dropdown-item rounded-circle bg-white" href="#" onClick={(e) => strokeColor(e)} data="#ffffff"></a></li>
                     </ul>
                 </div>
                 <div className="strokEnd dropdown">
@@ -68,13 +68,15 @@ function DrawCreate(){
                 </ul>
                 </div>
             </div>
-            <div className="canvasBox border">
+            <div id="canvasBox" className="border">
                 <canvas id="jsCanvas" className="w-100 h-100 bg-white" />
             </div>
-            <a className="save btn d-block text-white my-0 mx-auto mt-4" href="#">저장</a>
+            <a id="save" className="btn d-block text-white my-0 mx-auto mt-4" href="#">저장</a>
         </div>
     );
 }
+
+
 
 export default {Draw, DrawCreate};
 

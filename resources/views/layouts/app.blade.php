@@ -72,5 +72,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    @stack('javascript')
 </body>
 </html>

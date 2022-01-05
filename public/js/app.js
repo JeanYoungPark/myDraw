@@ -5406,55 +5406,84 @@ function DrawCreate() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "strokeColor",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
-          className: "dropdown-toggle p-0 border-0 bg-primary rounded-circle",
+          className: "dropdown-toggle p-0 border-0 rounded-circle",
           type: "button",
           id: "dropdownMenuButton2",
           "data-bs-toggle": "dropdown",
           "aria-expanded": "false"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+          id: "strokeColorDropDown",
           className: "dropdown-menu flex-wrap shadow border-0 bg-light",
           "aria-labelledby": "dropdownMenuButton2",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
             className: "checked d-flex justify-content-center py-2",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item rounded-circle bg-primary",
-              href: "#"
+              href: "#",
+              onClick: function onClick(e) {
+                return strokeColor(e);
+              },
+              data: "0d6efd"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
             className: "d-flex justify-content-center py-2",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item rounded-circle bg-secondary",
-              href: "#"
+              href: "#",
+              onClick: function onClick(e) {
+                return strokeColor(e);
+              },
+              data: "#6c757d"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
             className: "d-flex justify-content-center py-2",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item rounded-circle bg-success",
-              href: "#"
+              href: "#",
+              onClick: function onClick(e) {
+                return strokeColor(e);
+              },
+              data: "#198754"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
             className: "d-flex justify-content-center py-2",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item rounded-circle bg-warning",
-              href: "#"
+              href: "#",
+              onClick: function onClick(e) {
+                return strokeColor(e);
+              },
+              data: "#ffc107"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
             className: "d-flex justify-content-center py-2",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item rounded-circle bg-info",
-              href: "#"
+              href: "#",
+              onClick: function onClick(e) {
+                return strokeColor(e);
+              },
+              data: "#0dcaf0"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
             className: "d-flex justify-content-center py-2",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item rounded-circle bg-dark",
-              href: "#"
+              href: "#",
+              onClick: function onClick(e) {
+                return strokeColor(e);
+              },
+              data: "#212529"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
             className: "d-flex justify-content-center py-2",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item rounded-circle bg-white",
-              href: "#"
+              href: "#",
+              onClick: function onClick(e) {
+                return strokeColor(e);
+              },
+              data: "#ffffff"
             })
           })]
         })]
@@ -5492,13 +5521,15 @@ function DrawCreate() {
         })]
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "canvasBox border",
+      id: "canvasBox",
+      className: "border",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("canvas", {
         id: "jsCanvas",
         className: "w-100 h-100 bg-white"
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-      className: "save btn d-block text-white my-0 mx-auto mt-4",
+      id: "save",
+      className: "btn d-block text-white my-0 mx-auto mt-4",
       href: "#",
       children: "\uC800\uC7A5"
     })]
