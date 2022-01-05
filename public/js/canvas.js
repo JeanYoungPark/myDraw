@@ -52,6 +52,18 @@ function strokeColor(e){
     e.target.parentElement.classList.add('checked');
 }
 
+function strokeWidth(e){
+    let width = e.target.getAttribute('data');
+    let items = document.getElementById('strokeWidthDropDown');
+    ctx.lineWidth = width;
+
+    for(let i = 0 ; i < items.childElementCount; i++) {
+        items.children[i].classList.remove('checked');
+    }
+
+    e.target.parentElement.classList.add('checked');
+}
+
 if(canvas){
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mousedown", startPainting);

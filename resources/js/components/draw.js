@@ -41,10 +41,12 @@ function DrawCreate(){
             <div className="d-flex justify-content-around">
                 <div className="strokWidth">
                     <button className="dropdown-toggle p-0 border-0 bg-transparent" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                    <ul className="dropdown-menu shadow border-0" aria-labelledby="dropdownMenuButton1">
-                        <li><a className="dropdown-item" href="#">Action</a></li>
-                        <li><a className="dropdown-item" href="#">Another action</a></li>
-                        <li><a className="dropdown-item" href="#">Something else here</a></li>
+                    <ul id="strokeWidthDropDown" className="dropdown-menu shadow border-0" aria-labelledby="dropdownMenuButton1">
+                        <li className="checked"><a className="dropdown-item" href="#" data="1" onClick={(e) => strokeWidth(e)}>1</a></li>
+                        <li><a className="dropdown-item" href="#" data="5" onClick={(e) => strokeWidth(e)}>5</a></li>
+                        <li><a className="dropdown-item" href="#" data="10" onClick={(e) => strokeWidth(e)}>10</a></li>
+                        <li><a className="dropdown-item" href="#" data="15" onClick={(e) => strokeWidth(e)}>15</a></li>
+                        <li><a className="dropdown-item" href="#" data="20" onClick={(e) => strokeWidth(e)}>20</a></li>
                     </ul>
                 </div>
                 <div className="strokeColor">

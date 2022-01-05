@@ -5381,25 +5381,59 @@ function DrawCreate() {
           "data-bs-toggle": "dropdown",
           "aria-expanded": "false"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+          id: "strokeWidthDropDown",
           className: "dropdown-menu shadow border-0",
           "aria-labelledby": "dropdownMenuButton1",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+            className: "checked",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item",
               href: "#",
-              children: "Action"
+              data: "1",
+              onClick: function onClick(e) {
+                return strokeWidth(e);
+              },
+              children: "1"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item",
               href: "#",
-              children: "Another action"
+              data: "5",
+              onClick: function onClick(e) {
+                return strokeWidth(e);
+              },
+              children: "5"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item",
               href: "#",
-              children: "Something else here"
+              data: "10",
+              onClick: function onClick(e) {
+                return strokeWidth(e);
+              },
+              children: "10"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+              className: "dropdown-item",
+              href: "#",
+              data: "15",
+              onClick: function onClick(e) {
+                return strokeWidth(e);
+              },
+              children: "15"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+              className: "dropdown-item",
+              href: "#",
+              data: "20",
+              onClick: function onClick(e) {
+                return strokeWidth(e);
+              },
+              children: "20"
             })
           })]
         })]

@@ -19,6 +19,7 @@ img {width:100%;}
 #dropdownMenuButton1:after {width:30px; height:30px; content:''; background:url('/images/penIcon.png') no-repeat; background-size: cover; border:0;}
 #dropdownMenuButton2 {width:30px; height:30px; background:#0d6efd;}
 #dropdownMenuButton2:after {border:0;}
+#drawCreate .strokWidth .dropdown-menu li.checked .dropdown-item {background:#e9ecef;}
 #drawCreate .strokeColor .color {width:30px;height:30px;}
 #drawCreate .strokeColor .dropdown-menu {width:160px;}
 #drawCreate .strokeColor .dropdown-menu.show {display:flex;}
