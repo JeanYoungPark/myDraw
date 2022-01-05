@@ -5531,24 +5531,38 @@ function DrawCreate() {
           "aria-expanded": "false",
           children: "butt"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+          id: "strokeEndDropDown",
           className: "dropdown-menu shadow border-0",
           "aria-labelledby": "dropdownMenuButton3",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+            className: "checked",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item",
               href: "#",
+              data: "butt",
+              onClick: function onClick(e) {
+                return strokeEnd(e);
+              },
               children: "butt"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item",
               href: "#",
+              data: "round",
+              onClick: function onClick(e) {
+                return strokeEnd(e);
+              },
               children: "round"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               className: "dropdown-item",
               href: "#",
+              data: "square",
+              onClick: function onClick(e) {
+                return strokeEnd(e);
+              },
               children: "square"
             })
           })]

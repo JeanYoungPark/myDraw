@@ -63,10 +63,10 @@ function DrawCreate(){
                 </div>
                 <div className="strokEnd dropdown">
                 <button className="btn bg-secondary bg-opacity-25 dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">butt</button>
-                <ul className="dropdown-menu shadow border-0" aria-labelledby="dropdownMenuButton3">
-                    <li><a className="dropdown-item" href="#">butt</a></li>
-                    <li><a className="dropdown-item" href="#">round</a></li>
-                    <li><a className="dropdown-item" href="#">square</a></li>
+                <ul id="strokeEndDropDown" className="dropdown-menu shadow border-0" aria-labelledby="dropdownMenuButton3">
+                    <li className="checked"><a className="dropdown-item" href="#" data="butt" onClick={(e) => strokeEnd(e)}>butt</a></li>
+                    <li><a className="dropdown-item" href="#" data="round" onClick={(e) => strokeEnd(e)}>round</a></li>
+                    <li><a className="dropdown-item" href="#" data="square" onClick={(e) => strokeEnd(e)}>square</a></li>
                 </ul>
                 </div>
             </div>

@@ -39,6 +39,18 @@ function onMouseMove(e){
     ctx.stroke();
 }
 
+function strokeWidth(e){
+    let width = e.target.getAttribute('data');
+    let items = document.getElementById('strokeWidthDropDown');
+    ctx.lineWidth = width;
+
+    for(let i = 0 ; i < items.childElementCount; i++) {
+        items.children[i].classList.remove('checked');
+    }
+
+    e.target.parentElement.classList.add('checked');
+}
+
 function strokeColor(e){
     let color = e.target.getAttribute('data');
     let items = document.getElementById('strokeColorDropDown');
@@ -52,16 +64,18 @@ function strokeColor(e){
     e.target.parentElement.classList.add('checked');
 }
 
-function strokeWidth(e){
-    let width = e.target.getAttribute('data');
-    let items = document.getElementById('strokeWidthDropDown');
-    ctx.lineWidth = width;
+function strokeEnd(e){
+    let end = e.target.getAttribute('data');
+    let items = document.getElementById('strokeEndDropDown');
+    let btn = document.getElementById('dropdownMenuButton3');
+    ctx.lineCap = end;
 
     for(let i = 0 ; i < items.childElementCount; i++) {
         items.children[i].classList.remove('checked');
     }
 
     e.target.parentElement.classList.add('checked');
+    btn.innerText = end;
 }
 
 if(canvas){

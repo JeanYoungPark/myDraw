@@ -20,14 +20,15 @@ img {width:100%;}
 #dropdownMenuButton1:after {width:30px; height:30px; content:''; background:url('/images/penIcon.png') no-repeat; background-size: cover; border:0;}
 #dropdownMenuButton2 {width:30px; height:30px; background:#0d6efd;}
 #dropdownMenuButton2:after {border:0;}
-#drawCreate .strokWidth .dropdown-menu li.checked .dropdown-item {background:#e9ecef;}
+#dropdownMenuButton3 {width:90px; height:30px;padding:0 0.75em;}
 #drawCreate .strokeColor .color {width:30px;height:30px;}
 #drawCreate .strokeColor .dropdown-menu {width:160px;}
 #drawCreate .strokeColor .dropdown-menu.show {display:flex;}
 #drawCreate .strokeColor .dropdown-menu li {width:33.3333%;}
 #drawCreate .strokeColor .dropdown-menu .dropdown-item {width:30px;height:30px;}
+#drawCreate .strokWidth .dropdown-menu li.checked .dropdown-item {background:#e9ecef;}
 #drawCreate .strokeColor .dropdown-menu li.checked .dropdown-item {background:url('/images/checkIcon.png') no-repeat; background-size: 20px; background-position:center;}
-#dropdownMenuButton3 {height:30px;padding:0 0.75em;}
+#drawCreate .strokEnd .dropdown-menu li.checked .dropdown-item {background:#e9ecef;}
 #drawCreate #save {background-color:#939ea9;}
 @charset "UTF-8";
 /*!
