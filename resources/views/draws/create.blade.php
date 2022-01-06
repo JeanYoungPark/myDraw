@@ -17,7 +17,7 @@
                 <div class="strokeColor">
                     <button class="dropdown-toggle p-0 border-0 rounded-circle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"></button>
                     <ul id="strokeColorDropDown" class="dropdown-menu flex-wrap shadow border-0 bg-light" aria-labelledby="dropdownMenuButton2">
-                        <li class="checked d-flex justify-content-center py-2"><a class="dropdown-item rounded-circle bg-primary" href="#" onClick=strokeColor(this) data="0d6efd"></a></li>
+                        <li class="checked d-flex justify-content-center py-2"><a class="dropdown-item rounded-circle bg-primary" href="#" onClick=strokeColor(this) data="#0d6efd"></a></li>
                         <li class="d-flex justify-content-center py-2"><a class="dropdown-item rounded-circle bg-secondary" href="#" onClick=strokeColor(this) data="#6c757d"></a></li>
                         <li class="d-flex justify-content-center py-2"><a class="dropdown-item rounded-circle bg-success" href="#" onClick=strokeColor(this) data="#198754"></a></li>
                         <li class="d-flex justify-content-center py-2"><a class="dropdown-item rounded-circle bg-warning" href="#" onClick=strokeColor(this) data="#ffc107"></a></li>

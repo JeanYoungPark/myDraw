@@ -12,7 +12,10 @@ use App\Models\Draw;
 class DrawController extends Controller
 {
     public function index(){
-        return view('draws.index');
+        $draws = Draw::latest()->where('user_id', auth()->id())->get();
+        return view('draws.index', [
+            'draws' => $draws
+        ]);
     }
 
     public function create(){
@@ -22,10 +25,10 @@ class DrawController extends Controller
     public function store(){
         
         $img = request()->file_name;
-        $img = str_replace('data:image/png:base64','',$img);
+        $img = str_replace('data:image/png;base64,','',$img);
         $img = str_replace(' ', '+', $img);
         $imgName = Str::random(10).'.'.'png';
-        $dir = 'drawImgs/'.auth()->id();
+        $dir = 'public/drawImgs/'.auth()->id();
         if(!file_exists($dir)){
             Storage::makeDirectory($dir);
         }
@@ -40,8 +43,11 @@ class DrawController extends Controller
         return redirect('/draws');
     }
 
-    public function show(){
-        return view('draws.show');
+    public function show(Draw $draw){
+        abort_id(auth()->id() != $draw->user_id, 403);
+        return view('draws.show', [
+            'draws' => $draw
+        ]);
     }
 
     public function edit(){

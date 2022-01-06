@@ -91,7 +91,8 @@ if(canvas){
         let canvasData = canvas.toDataURL("image/png");
         let input = document.createElement('input');
         
-        input.setAttribute("file_name",canvasData);
+        input.setAttribute("name",'file_name');
+        input.setAttribute("value",canvasData);
         form.appendChild(input);
         form.submit();
     });
