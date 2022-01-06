@@ -2,13 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 function DrawBtn (){
-    return <a className="btn bg-secondary rounded bg-opacity-50" href="/draws/create">그림 그리기</a>;
+    return;
 }
 
 function Draw() {
     return (
         <div className="container d-flex justify-content-between">
-            {DrawBtn()}
+            <a className="btn bg-secondary rounded bg-opacity-50" href="/draws/create">그림 그리기</a>
             <div className="d-flex">
                 <div className="searchBox border position-relative">
                     <input className="border-0 h-100" type="text"></input>
@@ -73,7 +73,11 @@ function DrawCreate(){
             <div id="canvasBox" className="border">
                 <canvas id="jsCanvas" className="w-100 h-100 bg-white" />
             </div>
-            <a id="save" className="btn d-block text-white my-0 mx-auto mt-4" href="#">저장</a>
+            <div>
+                <from id="form" action="/draws/store" method="POST">
+                    <a id="save" className="btn d-block text-white my-0 mx-auto mt-4" href="#">저장</a>
+                </from>
+            </div>
         </div>
     );
 }

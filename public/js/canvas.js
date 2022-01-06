@@ -40,7 +40,7 @@ function onMouseMove(e){
 }
 
 function strokeWidth(e){
-    let width = e.target.getAttribute('data');
+    let width = e.getAttribute('data');
     let items = document.getElementById('strokeWidthDropDown');
     ctx.lineWidth = width;
 
@@ -48,11 +48,11 @@ function strokeWidth(e){
         items.children[i].classList.remove('checked');
     }
 
-    e.target.parentElement.classList.add('checked');
+    e.parentElement.classList.add('checked');
 }
 
 function strokeColor(e){
-    let color = e.target.getAttribute('data');
+    let color = e.getAttribute('data');
     let items = document.getElementById('strokeColorDropDown');
     ctx.strokeStyle = color;
     document.getElementById('dropdownMenuButton2').style.backgroundColor = color;
@@ -61,11 +61,11 @@ function strokeColor(e){
         items.children[i].classList.remove('checked');
     }
 
-    e.target.parentElement.classList.add('checked');
+    e.parentElement.classList.add('checked');
 }
 
 function strokeEnd(e){
-    let end = e.target.getAttribute('data');
+    let end = e.getAttribute('data');
     let items = document.getElementById('strokeEndDropDown');
     let btn = document.getElementById('dropdownMenuButton3');
     ctx.lineCap = end;
@@ -74,7 +74,7 @@ function strokeEnd(e){
         items.children[i].classList.remove('checked');
     }
 
-    e.target.parentElement.classList.add('checked');
+    e.parentElement.classList.add('checked');
     btn.innerText = end;
 }
 
@@ -83,4 +83,16 @@ if(canvas){
     canvas.addEventListener("mousedown", startPainting);
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave", stopPainting);
+
+    const saveBtn = document.getElementById('save');
+
+    saveBtn.addEventListener("click", function(){
+        const form = document.getElementById('form');
+        let canvasData = canvas.toDataURL("image/png");
+        let input = document.createElement('input');
+        
+        input.setAttribute("file_name",canvasData);
+        form.appendChild(input);
+        form.submit();
+    });
 }
