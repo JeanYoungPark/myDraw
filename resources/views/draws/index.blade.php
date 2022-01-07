@@ -19,13 +19,18 @@
                 </div>
                 <div class="d-flex">
                     <div id="bigIcon" class="icon d-flex align-items-center">
-                        <img src="/images/bigIcon.png" alt="big icon" />
+                        <img src="{{ asset('images/bigIcon.png') }}" alt="big icon" />
                     </div>
                     <div id="smallIcon" class="icon d-flex align-items-center">
-                        <img src="/images/smallIcon.png" alt="small icon" />
+                        <img src="{{ asset('images/smallIcon.png') }}" alt="small icon" />
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="album d-flex flex-wrap">
+            @foreach ($draws as $draw)
+                <div><img src="{{ asset('storage/drawImgs/'.$draw->user_id."/".$draw->file_name) }}"></div>
+            @endforeach
         </div>
     </div>
 @endsection
