@@ -50,7 +50,7 @@ class DrawController extends Controller
     }
 
     public function show(Draw $draw){
-        abort_id(auth()->id() != $draw->user_id, 403);
+        abort_if(auth()->id() != $draw->user_id, 403);
         return view('draws.show', [
             'draws' => $draw
         ]);
