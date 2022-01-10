@@ -11,8 +11,13 @@ use App\Models\Draw;
 
 class DrawController extends Controller
 {
-    public function index(){
-        $draws = Draw::latest()->where('user_id', auth()->id())->get();
+    public function index(Request $request){
+        if($request->orderBy == 'oldest') {
+            $draws = Draw::where('user_id', auth()->id())->get();
+        }else {
+            $draws = Draw::latest()->where('user_id', auth()->id())->get();
+        }
+
         return view('draws.index', [
             'draws' => $draws
         ]);
@@ -22,13 +27,14 @@ class DrawController extends Controller
         return view('draws.create');
     }
 
-    public function store(){
+    public function store(Request $request){
         
-        $img = request()->file_name;
+        $img = $request->input('file_name');
         $img = str_replace('data:image/png;base64,','',$img);
         $img = str_replace(' ', '+', $img);
         $imgName = Str::random(10).'.'.'png';
         $dir = 'public/drawImgs/'.auth()->id();
+
         if(!file_exists($dir)){
             Storage::makeDirectory($dir);
         }

@@ -13,8 +13,8 @@ img {width:100%;}
 #draw .icon#smallIcon {width:30px;}
 #searchBtn {top:0;right:0;width:38px;height:38px;padding:8px;background-color:#fff;}
 #searchBtn span {background: url('/images/search.png') no-repeat; background-size: cover;cursor:pointer;}
-#draw .album div{width:32%; margin-right:2%; margin-bottom:20px;}
-#draw .album div:nth-child(3n) {margin-right:0;}
+#album div{width:32%; margin-right:2%; margin-bottom:20px;}
+#album div:nth-child(3n) {margin-right:0;}
 
 #canvasBox {width:100%; height:600px;}
 #dropdownMenuButton1 {width:30px; height:30px;}

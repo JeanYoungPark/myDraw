@@ -13,9 +13,9 @@
                         </div>
                     </div>
                     <div class="orderBox border mx-2">
-                        <select class="border-0 w-100 h-100">
-                            <option>최신순</option>
-                            <option>오래된순</option>
+                        <select id="orderBy" class="border-0 w-100 h-100">
+                            <option value="latest">최신순</option>
+                            <option value="oldest">오래된순</option>
                         </select>
                     </div>
                     <div class="d-flex">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="album bigSize pt-3 d-flex flex-wrap">
+            <div id="album" class="bigSize pt-3 d-flex flex-wrap">
                 @foreach ($draws as $draw)
                     <div class="border"><a class="d-block w-100 h-100" href="/draws/{{ $draw->id }}"><img src="{{ asset('storage/drawImgs/'.$draw->user_id."/".$draw->file_name) }}"></a></div>
                 @endforeach
@@ -36,3 +36,7 @@
         </div>
     </div>
 @endsection
+
+@push('javascript')
+    <script type="text/javascript" src="{{ asset('js/draws.js') }}" defer></script>
+@endpush
