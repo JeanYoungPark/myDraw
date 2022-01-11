@@ -36,8 +36,11 @@
                 </div>
             </div>
             <div id="canvasBox" class="border">
-                <canvas id="jsCanvas" class="w-100 h-100 bg-white">
+                <canvas id="jsCanvas" class="w-100 h-100 bg-white"></canvas>
             </div>
+            @if ($errors->any())
+                <span class="text-danger">그림을 그린 후 저장해주세요.</span>
+            @endif
             <div>
                 <form id="form" action="/draws" method="post">
                     @method('post')

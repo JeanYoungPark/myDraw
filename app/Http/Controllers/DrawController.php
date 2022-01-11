@@ -28,7 +28,9 @@ class DrawController extends Controller
     }
 
     public function store(Request $request){
-        
+        $request->validate([
+            'file_name'=>'required'
+        ]);
         $img = $request->input('file_name');
         $img = str_replace('data:image/png;base64,','',$img);
         $img = str_replace(' ', '+', $img);
@@ -50,10 +52,12 @@ class DrawController extends Controller
     }
 
     public function show(Draw $draw){
-        abort_if(auth()->id() != $draw->user_id, 403);
+        // abort_if(auth()->id() != $draw->user_id, 403);
+
         return view('draws.show', [
             'draws' => $draw
         ]);
+        
     }
 
     public function edit(){

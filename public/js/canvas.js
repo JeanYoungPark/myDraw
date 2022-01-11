@@ -87,13 +87,17 @@ if(canvas){
     const saveBtn = document.getElementById('save');
 
     saveBtn.addEventListener("click", function(){
-        const form = document.getElementById('form');
-        let canvasData = canvas.toDataURL("image/png");
-        let input = document.createElement('input');
-        
-        input.setAttribute("name",'file_name');
-        input.setAttribute("value",canvasData);
-        form.appendChild(input);
-        form.submit();
+        if(data.length > 0) {
+            const form = document.getElementById('form');
+            let canvasData = canvas.toDataURL("image/png");
+            let input = document.createElement('input');
+            
+            input.setAttribute("name",'file_name');
+            input.setAttribute("value",canvasData);
+            form.appendChild(input);
+            form.submit();
+        }else {
+            alert('그림을 그린 후 저장해주세요.');
+        }
     });
 }
