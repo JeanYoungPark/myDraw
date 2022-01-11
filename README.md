@@ -21,8 +21,10 @@
 <br>
 
 > **브라우저 서포트**
-
-테스트 필요  
+<div style="display:flex;">
+    <img src="https://user-images.githubusercontent.com/70056958/148942464-166c00ed-88f3-4b1a-8688-464b130a6368.png" width=50 height=50>
+    <img src="https://user-images.githubusercontent.com/70056958/148944236-6ba8206c-2dfe-47f1-b7fd-754bbfaa98a3.png" width=50 height=50>
+</div>
 <br>
 
 > **체크리스트**
