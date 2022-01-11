@@ -4,6 +4,9 @@ img {width:100%;}
 #nav {top:25px; right:0;}
 #nav .nav-item:first-child {margin-right:5px;}
 
+#home div {width:32%; margin-right:2%;margin-bottom:20px;}
+#home div:nth-child(3n) {margin-right:0;}
+
 #draw .searchBox,
 #draw .orderBox {height:40px;}
 #draw .searchBox {width:180px;}
