@@ -6,12 +6,12 @@
             <div class="d-flex justify-content-between">
                 <a class="btn bg-secondary rounded bg-opacity-50" href="/draws/create">그림 그리기</a>
                 <div class="d-flex">
-                    <div class="searchBox border position-relative">
+                    {{-- <div class="searchBox border position-relative">
                         <input class="border-0 h-100" type="text">
                         <div id="searchBtn" class="position-absolute">
                             <span class="d-block w-100 h-100"></span>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="orderBox border mx-2">
                         <select id="orderBy" class="border-0 w-100 h-100">
                             <option value="latest">최신순</option>
