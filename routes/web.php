@@ -17,7 +17,7 @@ use App\Http\Controllers\DrawController;
 
 Route::get('/', [HomeController::class, 'index']);  
 
-Route::resource('draws', DrawController::class)->middleware('auth');
+// Route::resource('draws', DrawController::class)->middleware('auth');
 
 Auth::routes();
 

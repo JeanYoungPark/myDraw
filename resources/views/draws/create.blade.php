@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="drawCreate">
+    <div id="root"></div>
+    <!-- <div id="drawCreate">
         <div class="container">
             <div class="d-flex justify-content-around">
                 <div class="strokWidth">
@@ -49,7 +50,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
 @endsection
 
 @push('javascript')

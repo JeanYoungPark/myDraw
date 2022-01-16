@@ -1,18 +1,15 @@
-@extends('layouts.app')
+import React from "react";
 
-@section('content')
-    <div id="root"></div>   
-    <!-- <div id="draw">
+function DrawBtn (){
+    return;
+}
+
+function Draws() {
+    return (
         <div class="container">
             <div class="d-flex justify-content-between">
                 <a class="btn bg-secondary rounded bg-opacity-50" href="/draws/create">그림 그리기</a>
                 <div class="d-flex">
-                    {{-- <div class="searchBox border position-relative">
-                        <input class="border-0 h-100" type="text">
-                        <div id="searchBtn" class="position-absolute">
-                            <span class="d-block w-100 h-100"></span>
-                        </div>
-                    </div> --}}
                     <div class="orderBox border mx-2">
                         <select id="orderBy" class="border-0 w-100 h-100">
                             <option value="latest">최신순</option>
@@ -29,15 +26,18 @@
                     </div>
                 </div>
             </div>
-            <div id="album" class="bigSize pt-3 d-flex flex-wrap">
+            {/* <div id="album" class="bigSize pt-3 d-flex flex-wrap">
                 @foreach ($draws as $draw)
                     <div class="border"><a class="d-block w-100 h-100" href="/draws/{{ $draw->id }}"><img src="{{ asset('storage/drawImgs/'.$draw->user_id."/".$draw->file_name) }}"></a></div>
                 @endforeach
-            </div>
+            </div> */}
         </div>
-    </div> -->
-@endsection
+    );
+}
 
-@push('javascript')
-    <script type="text/javascript" src="{{ asset('js/draws.js') }}" defer></script>
-@endpush
+
+export default Draws;
+
+// if (document.getElementById("drawCreate")) {
+//     ReactDOM.render(<DrawCreate />, document.getElementById("drawCreate"));
+// }
