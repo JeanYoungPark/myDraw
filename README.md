@@ -21,10 +21,10 @@
 3. laravel 설치
 4. node.js 설치
 5. $ git clone https://github.com/JeanYoungPark/myDraw.git 실행
-6. .env 파일 생성
+6. $ cp .env.example .env 실행
 7. $ composer install 실행 (php.ini 관련 문제가 생겼었음 -> extension=php_fileinfo.dll 추가)
 8. $ npm install 실행
-
+9. $ php artisan migrate 실행
 
 <br>
 
